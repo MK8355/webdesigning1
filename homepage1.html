@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            width: 100%;
+            height: 100%;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo h1 {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 20cm;
+            bottom: 450px;
+            position: relative;
+            z-index: 300;
+            margin-top: 2px;
+            margin-bottom: auto;
+        }
+
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: rgb(37, 33, 33);
+            text-align: center;
+            padding: 100px 0;
+            background-color: bisque;
+        }
+
+        .hero-text {
+            background-color: bisque;
+        }
+
+        .hero-text h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background-color: rgb(146, 108, 24);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 100px;
+            background-color: rgba(224, 144, 23, 0.943);
+        }
+
+        .shop-now-btn {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 50px;
+        }
+
+        .featured-products {
+            text-align: center;
+            margin: 50px 0;
+            background-color: antiquewhite;
+
+        }
+
+        .featured-products h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: flex;
+            padding: 4cm;
+            gap: 20px;
+            bottom: 70px;
+            top: 70px;
+
+        }
+
+        .product-card {
+            background-color: #ff0000;
+            padding: 110px;
+            border-radius: 10px;
+            justify-content: flex;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 190px;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body footer {
+            display: grid;
+            justify-content: end;
+            align-content: end;
+            min-width: 100vh;
+            background: #e8e8e8;
+            padding: 50px;
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            height: auto;
+            background: #fff;
+            padding: 50px 100px;
+        }
+
+        footer .container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        footer .container .sec h2 {
+            position: relative;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 15px
+        }
+
+        footer .container .sec p {
+            color: #555;
+        }
+
+        footer .container .sci {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+        }
+
+        footer .container .sci li {
+            list-style: none;
+        }
+
+        footer .container .sci li a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background: #333;
+            align-content: center;
+            justify-content: center;
+            display: grid;
+            text-decoration: none;
+
+        }
+
+        footer .container .sci li a i {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        footer .container .quicklinks ul li {
+            list-style: none;
+        }
+
+        footer .container .quicklinks ul li a {
+            color: #555;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        footer .container .contact .info {
+            position: relative;
+        }
+
+        footer .container .contact .info li {
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            margin-bottom: 16px;
+        }
+
+        footer .container .contact .info li span {
+            color: #555;
+            font-size: 20px;
+            gap: 10px;
+        }
+
+        footer .container .contact .info li a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .copyrightText {
+            width: 100%;
+            background: #fff;
+            padding: 20px 100px 30px;
+            text-align: center;
+            color: #555;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>ShoeShop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Step Into Style</h2>
+            <p>Discover the latest trends in footwear for every occasion.</p>
+
+        </div>
+    </section>
+
+    <section id="home" class="hero-img">
+        <div class="hero-img"></div>
+        <img src="C:\Users\mahes\Downloads\malvestida-DMl5gG0yWWY-unsplash.jpg" alt="Branded Shoes " class="hero-img">
+    </section>
+
+    <section class="featured-products">
+        <h2>Featured Shoes</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="C:\Users\mahes\Downloads\maksim-larin-ezdrvzA1hZw-unsplash.jpg" alt="Shoe 1">
+                <h3>Running Shoes</h3>
+                <p>$80.00</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="C:\Users\mahes\Downloads\xavier-teo-SxAXphIPWeg-unsplash.jpg" alt="Shoe 2" width="auto"
+                    height="auto">
+                <h3>Casual Sneaker</h3>
+                <p>$65.00</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="C:\Users\mahes\Downloads\imani-bahati-LxVxPA1LOVM-unsplash.jpg" alt="Shoe 3">
+                <h3>Formal Shoes</h3>
+                <p>$120.00</p>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>lorem ipsum, sollar sit amet consectetur adipisicing
+                    elite. Venime qui esse sed illo nam, sint ut
+                    exercitationem quam nesciunt.</p>
+                <ul class="sci">
+                    <li><a herf="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a herf="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a herf="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a herf="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FEQ</a></li>
+                    <li><a href="#">Privecy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="sec quicklinks">
+                <h2>Shop</h2>
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Shoes</a></li>
+                </ul>
+            </div>
+
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="tel:+12345678900">+1 234 567 8900</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mailto:knowmoe@emailto.mee">knowmoe@emailto.mee</a></p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <div class="copyrightText">
+        <p> Copyright 2023 Online Tutorial. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>
